@@ -10,5 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-}
+    @IBOutlet weak var circleView: Circle!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        circleView.animateCircle()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        circleView.layer.cornerRadius = circleView.bounds.width / 2
+    }
+
+}
