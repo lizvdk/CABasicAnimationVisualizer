@@ -22,4 +22,27 @@ class ViewController: UIViewController {
         circleView.layer.cornerRadius = circleView.bounds.width / 2
     }
 
+    @IBAction func fillModeButtonPressed(sender: UIButton) {
+        let alertController = UIAlertController(title: "Select FillMode", message: nil, preferredStyle: .ActionSheet)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+
+        let selectForwardsAction = UIAlertAction(title: "Forwards", style: .Default) { (action) in
+            self.circleView.viewModel.fillMode = kCAFillModeForwards
+        }
+        alertController.addAction(selectForwardsAction)
+
+        let selectBackwardsAction = UIAlertAction(title: "Backwards", style: .Default) { (action) in
+            self.circleView.viewModel.fillMode = kCAFillModeBackwards
+        }
+        alertController.addAction(selectBackwardsAction)
+
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
+
+    }
 }

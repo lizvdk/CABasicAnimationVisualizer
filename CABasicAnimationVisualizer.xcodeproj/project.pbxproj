@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C04C50BC1D42A99500A69407 /* CircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04C50BB1D42A99500A69407 /* CircleViewModel.swift */; };
 		C06E55FC1D42957B00E0210C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E55FB1D42957B00E0210C /* AppDelegate.swift */; };
 		C06E55FE1D42957B00E0210C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E55FD1D42957B00E0210C /* ViewController.swift */; };
 		C06E56031D42957B00E0210C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06E56021D42957B00E0210C /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C04C50BB1D42A99500A69407 /* CircleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleViewModel.swift; sourceTree = "<group>"; };
 		C06E55F81D42957B00E0210C /* CABasicAnimationVisualizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CABasicAnimationVisualizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06E55FB1D42957B00E0210C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06E55FD1D42957B00E0210C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				C06E56041D42957B00E0210C /* LaunchScreen.storyboard */,
 				C06E56071D42957B00E0210C /* Info.plist */,
 				C06E56111D4298EB00E0210C /* Circle.swift */,
+				C04C50BB1D42A99500A69407 /* CircleViewModel.swift */,
 			);
 			path = CABasicAnimationVisualizer;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				C06E55FE1D42957B00E0210C /* ViewController.swift in Sources */,
 				C06E55FC1D42957B00E0210C /* AppDelegate.swift in Sources */,
+				C04C50BC1D42A99500A69407 /* CircleViewModel.swift in Sources */,
 				C06E56121D4298EB00E0210C /* Circle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +288,7 @@
 				C06E560C1D42957B00E0210C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

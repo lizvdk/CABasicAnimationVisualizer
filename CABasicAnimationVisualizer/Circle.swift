@@ -11,6 +11,11 @@ import UIKit
 class Circle: UIView {
 
     private let circleLayer = CAShapeLayer()
+    var viewModel = CircleViewModel() {
+        didSet {
+            animateCircle()
+        }
+    }
 
     // MARK - Init
 
@@ -54,7 +59,12 @@ class Circle: UIView {
         animation.fromValue = 0.0
         animation.toValue = 1.0
         animation.fillMode = kCAFillModeForwards
+        animation.removedOnCompletion = false
 
         circleLayer.addAnimation(animation, forKey: nil)
+    }
+
+    func stopAnimatingCircle() {
+        circleLayer.removeAllAnimations()
     }
 }

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -18,18 +18,39 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gur-Bd-vIB" userLabel="CircleView" customClass="Circle" customModule="CABasicAnimationVisualizer" customModuleProvider="target">
-                    <rect key="frame" x="150" y="150" width="300" height="300"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BDI-tX-l00" userLabel="Vertical Stack View">
+                    <rect key="frame" x="150" y="135" width="300" height="330"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gur-Bd-vIB" userLabel="CircleView" customClass="Circle" customModule="CABasicAnimationVisualizer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="gur-Bd-vIB" secondAttribute="height" multiplier="1:1" id="xd4-WK-qEg"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Iss-V4-YSf" userLabel="Horizontal Stack View">
+                            <rect key="frame" x="119" y="300" width="62" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vny-nx-gXg" userLabel="fillModeButton">
+                                    <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                    <state key="normal" title="Fill Mode"/>
+                                    <connections>
+                                        <action selector="fillModeButtonPressed:" destination="-1" eventType="touchUpInside" id="kVX-7m-eEb"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="gur-Bd-vIB" secondAttribute="height" multiplier="1:1" id="Zuf-jx-uyC"/>
+                        <constraint firstItem="gur-Bd-vIB" firstAttribute="width" secondItem="BDI-tX-l00" secondAttribute="width" id="h0u-RE-q0G"/>
                     </constraints>
-                </view>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="gur-Bd-vIB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="25Q-nK-TZ2"/>
-                <constraint firstItem="gur-Bd-vIB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MDg-fT-jf5"/>
-                <constraint firstItem="gur-Bd-vIB" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="ewe-Kd-s6V"/>
+                <constraint firstItem="BDI-tX-l00" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="ZBj-LM-zTv"/>
+                <constraint firstItem="BDI-tX-l00" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aSb-F6-x5A"/>
+                <constraint firstItem="BDI-tX-l00" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="p5k-gk-8rW"/>
             </constraints>
         </view>
     </objects>
